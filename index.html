@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(184, 179, 179);
+            line-height: 28px;
+        }
+        .container {
+            width: 100%;
+            box-shadow: 8px 8px 12px rgba(31, 31, 31, 0.1);
+            padding: 20px;;
+        }
+        li {
+            cursor: pointer;
+        }
+        .dropdown {
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Home</li>
+            <li id="service">Services</li>
+            <ul class="dropdown">
+                <li>Web Development</li>
+                <li>App Development</li>
+                <li>SEO Services</li>
+            </ul>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        const service = document.getElementById('service');
+
+        service.addEventListener('mouseover', () => {
+            dropdown.style.display = 'block';
+        })
+    </script>
+</body>
+</html>
